@@ -1,0 +1,60 @@
+﻿@model WebAPI.Przychod
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Przychod</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataWystawieniaFaktury)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataWystawieniaFaktury)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NumerFaktury)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumerFaktury)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NipFirmy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NipFirmy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OpisFaktury)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OpisFaktury)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WartoscNetto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WartoscNetto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WartoscVat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WartoscVat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WartoscBrutto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WartoscBrutto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

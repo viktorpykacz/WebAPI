@@ -6,8 +6,8 @@ namespace WebAPI.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
-        public DbSet<Przychody> Przychody { get; set; }
-        public DbSet<Koszty> Koszty { get; set; }
+        public DbSet<Przychod> Przychody { get; set; }
+        public DbSet<Koszt> Koszty { get; set; }
 
     }
 }
