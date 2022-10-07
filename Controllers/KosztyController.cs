@@ -27,8 +27,32 @@ namespace WebAPI.Controllers
         public async Task<ActionResult<IEnumerable<Koszt>>> GetKoszty()
         {
             return await _context.Koszty.OrderByDescending(x => x.DataWystawieniaFaktury).ToListAsync();
-        }       
+        }
 
-        
+        // GET: api/Koszty biurowe
+        [HttpGet("Biuro")]
+        public async Task<ActionResult<IEnumerable<Koszt>>> GetKosztyBiuro()
+        {
+            return await _context.Koszty.Where(x => x.RodzajKosztu == "Biuro").ToListAsync();
+        }
+
+        // GET: api/Koszty samochodowe
+        [HttpGet("Auto")]
+        public async Task<ActionResult<IEnumerable<Koszt>>> GetKosztyAuto()
+        {
+            return await _context.Koszty.Where(x => x.RodzajKosztu == "Auto").ToListAsync();
+        }
+
+        // POST: api/Koszty
+        [HttpPost]
+        public async Task<ActionResult<Koszt>> PostKoszty(Koszt koszty)
+        {
+            _context.Koszty.Add(koszty);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetKoszty", new { id = koszty.Id }, koszty);
+        }
+
+
     }
 }
