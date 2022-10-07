@@ -2,7 +2,7 @@
 {
     public class Koszt
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
         public DateTime? DataWystawieniaFaktury { get; set; }
         public string? NumerFaktury { get; set; }
         public string? NipFirmy { get; set; }
