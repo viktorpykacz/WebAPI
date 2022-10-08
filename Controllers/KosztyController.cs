@@ -53,6 +53,57 @@ namespace WebAPI.Controllers
             return CreatedAtAction("GetKoszty", new { id = koszty.Id }, koszty);
         }
 
+        private bool KosztyExists(long id)
+        {
+            return _context.Koszty.Any(e => e.Id == id);
+        }
+
+        // PUT: api/Koszty/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutKoszty(int id, Koszt koszty)
+        {
+            if (id != koszty.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(koszty).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!KosztyExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        // DELETE: api/Koszty/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteKoszty(int id)
+        {
+            var koszty = await _context.Koszty.FindAsync(id);
+            if (koszty == null)
+            {
+                return NotFound();
+            }
+
+            _context.Koszty.Remove(koszty);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
 
     }
 }
