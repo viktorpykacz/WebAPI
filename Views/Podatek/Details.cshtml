@@ -1,0 +1,48 @@
+﻿@model WebAPI.Podatek
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Podatek</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataWpisu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataWpisu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VatDoOdliczenia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VatDoOdliczenia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PitDoZaplaty)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PitDoZaplaty)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VatDoZaplaty)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VatDoZaplaty)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ZusDoZaplaty)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ZusDoZaplaty)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

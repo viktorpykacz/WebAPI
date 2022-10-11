@@ -1,0 +1,54 @@
+﻿@model WebAPI.ZestawienieMiesieczne
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ZestawienieMiesieczne</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataWpisu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataWpisu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KosztyBiuro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KosztyBiuro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KosztyAuto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KosztyAuto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KosztyLacznie)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KosztyLacznie)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrzychodyLacznie)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrzychodyLacznie)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VatLacznie)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VatLacznie)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -29,4 +29,26 @@ WartoscVat DECIMAL(18,2),
 WartoscBrutto DECIMAL(18,2)
 )
 
-select * from koszty
+
+--4. Create Table ZestawienieMiesieczne
+CREATE TABLE ZestawienieMiesieczne 
+(
+Id int IDENTITY(1,1) PRIMARY KEY,
+DataWpisu DATETIME,
+KosztyBiuro DECIMAL(18,2),
+KosztyAuto DECIMAL(18,2),
+KosztyLacznie DECIMAL(18,2),
+PrzychodyLacznie DECIMAL(18,2),
+VatLacznie DECIMAL(18,2)
+)
+
+--5. Create Table Podatek
+CREATE TABLE Podatek 
+(
+Id int IDENTITY(1,1) PRIMARY KEY,
+DataWpisu DATETIME,
+VatDoOdliczenia DECIMAL(18,2),
+PitDoZaplaty DECIMAL(18,2),
+VatDoZaplaty DECIMAL(18,2),
+ZusDoZaplaty DECIMAL(18,2)
+)
