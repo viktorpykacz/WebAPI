@@ -1,0 +1,119 @@
+﻿@model IEnumerable<WebAPI.Kontrakt>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DataWpisu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartKontraktu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CzyTerminowy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KoniecKontraktu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaProjektu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StawkaGodzinowa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StawkaMiesieczna)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stanowisko)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CzyOutsourcing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaZleceniodawcy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NipZleceniodawcy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdresZleceniodawcy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KodPocztowyZleceniodawcy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiastoZleceniodawcy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KrajZleceniodawcy)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataWpisu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartKontraktu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CzyTerminowy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KoniecKontraktu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaProjektu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StawkaGodzinowa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StawkaMiesieczna)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stanowisko)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CzyOutsourcing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazwaZleceniodawcy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NipZleceniodawcy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdresZleceniodawcy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KodPocztowyZleceniodawcy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiastoZleceniodawcy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KrajZleceniodawcy)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

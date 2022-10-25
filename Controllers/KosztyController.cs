@@ -12,7 +12,6 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-
     public class KosztyController : ControllerBase
     {
         private readonly DataContext _context;
@@ -29,18 +28,11 @@ namespace WebAPI.Controllers
             return await _context.Koszty.OrderByDescending(x => x.DataWystawieniaFaktury).ToListAsync();
         }
 
-        // GET: api/Koszty biurowe
-        [HttpGet("Biuro")]
-        public async Task<ActionResult<IEnumerable<Koszt>>> GetKosztyBiuro()
+        // GET: api/RodzajKosztu
+        [HttpGet("{RodzajKosztu}")]
+        public async Task<ActionResult<IEnumerable<Koszt>>> GetKosztyDanegoRodzaju(string RodzajKosztu)
         {
-            return await _context.Koszty.Where(x => x.RodzajKosztu == "Biuro").ToListAsync();
-        }
-
-        // GET: api/Koszty samochodowe
-        [HttpGet("Auto")]
-        public async Task<ActionResult<IEnumerable<Koszt>>> GetKosztyAuto()
-        {
-            return await _context.Koszty.Where(x => x.RodzajKosztu == "Auto").ToListAsync();
+            return await _context.Koszty.Where(x => x.RodzajKosztu == RodzajKosztu).ToListAsync();
         }
 
         // POST: api/Koszty

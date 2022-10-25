@@ -12,7 +12,6 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-
     public class PrzychodyController : ControllerBase
     {
         private readonly DataContext _context;

@@ -11,6 +11,7 @@
         public decimal? StawkaGodzinowa { get; set; }
         public decimal? StawkaMiesieczna { get; set; }
         public string? Stanowisko { get; set; }
+        public string? OpisStanowiska { get; set; }
         public bool? CzyOutsourcing { get; set; }
         public string? NazwaZleceniodawcy { get; set; }
         public string? NipZleceniodawcy { get; set; }

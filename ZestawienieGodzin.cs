@@ -7,7 +7,7 @@
         public int? Rok { get; set; }
         public int? Miesiac { get; set; }
         public string? NazwaProjektu { get; set; }
-        public decimal? IleGodzin { get; set; }
+        public int? IleGodzin { get; set; }
 
     }
 }

@@ -1,0 +1,104 @@
+﻿@model WebAPI.Kontrakt
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Kontrakt</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="DataWpisu" class="control-label"></label>
+                <input asp-for="DataWpisu" class="form-control" />
+                <span asp-validation-for="DataWpisu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartKontraktu" class="control-label"></label>
+                <input asp-for="StartKontraktu" class="form-control" />
+                <span asp-validation-for="StartKontraktu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CzyTerminowy" class="control-label"></label>
+                <input asp-for="CzyTerminowy" class="form-control" />
+                <span asp-validation-for="CzyTerminowy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KoniecKontraktu" class="control-label"></label>
+                <input asp-for="KoniecKontraktu" class="form-control" />
+                <span asp-validation-for="KoniecKontraktu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaProjektu" class="control-label"></label>
+                <input asp-for="NazwaProjektu" class="form-control" />
+                <span asp-validation-for="NazwaProjektu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StawkaGodzinowa" class="control-label"></label>
+                <input asp-for="StawkaGodzinowa" class="form-control" />
+                <span asp-validation-for="StawkaGodzinowa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StawkaMiesieczna" class="control-label"></label>
+                <input asp-for="StawkaMiesieczna" class="form-control" />
+                <span asp-validation-for="StawkaMiesieczna" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stanowisko" class="control-label"></label>
+                <input asp-for="Stanowisko" class="form-control" />
+                <span asp-validation-for="Stanowisko" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CzyOutsourcing" class="control-label"></label>
+                <input asp-for="CzyOutsourcing" class="form-control" />
+                <span asp-validation-for="CzyOutsourcing" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazwaZleceniodawcy" class="control-label"></label>
+                <input asp-for="NazwaZleceniodawcy" class="form-control" />
+                <span asp-validation-for="NazwaZleceniodawcy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NipZleceniodawcy" class="control-label"></label>
+                <input asp-for="NipZleceniodawcy" class="form-control" />
+                <span asp-validation-for="NipZleceniodawcy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdresZleceniodawcy" class="control-label"></label>
+                <input asp-for="AdresZleceniodawcy" class="form-control" />
+                <span asp-validation-for="AdresZleceniodawcy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KodPocztowyZleceniodawcy" class="control-label"></label>
+                <input asp-for="KodPocztowyZleceniodawcy" class="form-control" />
+                <span asp-validation-for="KodPocztowyZleceniodawcy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MiastoZleceniodawcy" class="control-label"></label>
+                <input asp-for="MiastoZleceniodawcy" class="form-control" />
+                <span asp-validation-for="MiastoZleceniodawcy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KrajZleceniodawcy" class="control-label"></label>
+                <input asp-for="KrajZleceniodawcy" class="form-control" />
+                <span asp-validation-for="KrajZleceniodawcy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

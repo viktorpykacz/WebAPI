@@ -10,6 +10,8 @@ using WebAPI.Data;
 
 namespace WebAPI.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class ZestawienieMiesieczneController : Controller
     {
         private readonly DataContext _context;

@@ -1,0 +1,108 @@
+﻿@model WebAPI.Kontrakt
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Kontrakt</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataWpisu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataWpisu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartKontraktu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StartKontraktu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CzyTerminowy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CzyTerminowy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KoniecKontraktu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KoniecKontraktu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NazwaProjektu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NazwaProjektu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StawkaGodzinowa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StawkaGodzinowa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StawkaMiesieczna)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StawkaMiesieczna)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Stanowisko)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Stanowisko)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CzyOutsourcing)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CzyOutsourcing)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NazwaZleceniodawcy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NazwaZleceniodawcy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NipZleceniodawcy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NipZleceniodawcy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdresZleceniodawcy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdresZleceniodawcy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KodPocztowyZleceniodawcy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KodPocztowyZleceniodawcy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MiastoZleceniodawcy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MiastoZleceniodawcy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KrajZleceniodawcy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KrajZleceniodawcy)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

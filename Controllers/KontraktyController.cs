@@ -12,10 +12,10 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PodatekController : Controller
+    public class KontraktyController : Controller
     {
         private readonly DataContext _context;
 
-        
+
     }
 }
