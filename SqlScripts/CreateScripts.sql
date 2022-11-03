@@ -54,6 +54,8 @@ IF NOT EXISTS(SELECT * FROM sysobjects where name = 'ZestawienieMiesieczne')
 	(
 	Id int IDENTITY(1,1) PRIMARY KEY,
 	DataWpisu DATETIME,
+	Rok INT, 
+	Miesiac INT,
 	KosztyBiuro DECIMAL(18,2),
 	KosztyAuto DECIMAL(18,2),
 	KosztyLacznie DECIMAL(18,2),
@@ -70,6 +72,8 @@ IF NOT EXISTS(SELECT * FROM sysobjects where name = 'Podatek')
 	(
 	Id int IDENTITY(1,1) PRIMARY KEY,
 	DataWpisu DATETIME,
+	Rok INT, 
+	Miesiac INT, 
 	VatDoOdliczenia DECIMAL(18,2),
 	PitDoZaplaty DECIMAL(18,2),
 	VatDoZaplaty DECIMAL(18,2),

@@ -35,7 +35,7 @@ namespace WebAPI.Controllers
             return await _context.ZestawienieGodzin.Where(x => x.NazwaProjektu == NazwaProjektu).ToListAsync();
         }
 
-        //GET: api/ZestawienieGodzin/NazwaProjektu
+        //GET: api/ZestawienieGodzin/Rok/Miesiac
         [HttpGet("{NazwaProjektu}/{Rok}/{Miesiac}")]
         public async Task<ActionResult<IEnumerable<ZestawienieGodzin>>> GetZestawienieGodzinZProjektuZRokuZMiesiaca(string NazwaProjektu, int Rok, int Miesiac)
         {
