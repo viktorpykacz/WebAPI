@@ -89,6 +89,7 @@ IF NOT EXISTS(SELECT * FROM sysobjects where name = 'Godziny')
 	(
 	Id int IDENTITY(1,1) PRIMARY KEY,
 	DataWpisu DATETIME,
+	DataPracy DATETIME,
 	NazwaProjektu VARCHAR(50),
 	IleGodzin INT
 	)

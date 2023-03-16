@@ -1,13 +1,11 @@
-﻿namespace WebAPI
+﻿namespace WebAPI.Models
 {
-    public class ZestawienieGodzin
+    public class Godziny
     {
         public int Id { get; set; }
         public DateTime? DataWpisu { get; set; }
-        public int? Rok { get; set; }
-        public int? Miesiac { get; set; }
+        public DateTime? DataPracy { get; set; }
         public string? NazwaProjektu { get; set; }
         public int? IleGodzin { get; set; }
-
     }
 }
